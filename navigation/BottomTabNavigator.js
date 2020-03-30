@@ -20,7 +20,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={HomeScreen}
         options={{
           title: 'Home',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-fitness" />,
         }}
       />
       <BottomTab.Screen
@@ -28,7 +28,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={ProfileScreen}
         options={{
           title: 'Profile',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-contact" />,
         }}
       />
     </BottomTab.Navigator>

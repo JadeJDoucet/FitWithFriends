@@ -5,6 +5,29 @@ import * as WebBrowser from 'expo-web-browser';
 
 import { MonoText } from '../components/StyledText';
 
+//md-calendar
+
+function getTodaysWorkout() {
+  return "Full Body Workout" // Ability to click this text and choose from dropdown our workouts, or create one
+} 
+
+function getRecommendedWorkouts() {
+
+}
+
+function getFriendWorkouts() {
+  return (
+    <View style={styles.workoutStream1}>
+      <View style={styles.workoutStreamItem}>
+        <Text>Extreme Core</Text>
+      </View>
+      <View style={styles.workoutStreamItem}>
+        <Text>Extreme Chest</Text>
+      </View>
+    </View>
+    );
+}
+
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
@@ -18,11 +41,12 @@ export default function HomeScreen() {
             }
             style={styles.welcomeImage}
           />
+          {getFriendWorkouts()}
         </View>
       </ScrollView>
 
       <View style={styles.tabBarInfoContainer}>
-        <Text style={styles.tabBarInfoText}>Today's workout: "My Workout"</Text>
+          <Text style={styles.tabBarInfoText}>Today's workout: {getTodaysWorkout()}</Text> 
       </View>
     </View>
   );
@@ -77,4 +101,17 @@ const styles = StyleSheet.create({
     color: 'rgba(96,100,109, 1)',
     textAlign: 'center',
   },
+  workoutStreamItem: {
+    // This will be a paper-like box with a workout
+    height: 150,
+    width: 150,
+    padding: 5,
+    margin: 5,
+    backgroundColor: 'grey',
+  },
+  workoutStream1: {
+    // This will be a horizontal stream, side scrolling eventually
+    flexDirection: 'row',
+
+  }
 });
