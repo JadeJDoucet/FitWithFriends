@@ -1,25 +1,22 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import StreamItem from './StreamItem';
+
+const names = ['Killer Core', 'Deadly Chest', 'Full Body Breakdown', 'Booty Builder', 'Bicep Breakdown'];
+
 
 export default function SuggestedStream(props) {
     return (
         <ScrollView style={styles.workoutStream1} horizontal>
-          <View style={styles.workoutStreamItem}>
-            <Text>Killer Core</Text>
-          </View>
-          <View style={styles.workoutStreamItem}>
-            <Text>Deadly Chest</Text>
-          </View>
-          <View style={styles.workoutStreamItem}>
-            <Text>Full Body Breakdown</Text>
-          </View>
-          <View style={styles.workoutStreamItem}>
-            <Text>Booty Builder</Text>
-          </View>
+          {names.map((name, i)=>(
+            <StreamItem routineName={name} key={i}/>
+          ))}
         </ScrollView>
         );
 }
+// Add this after styles.workoutStreamItem
+// , {backgroundColor: 'red'}
 
 const styles = StyleSheet.create({
   workoutStreamItem: {

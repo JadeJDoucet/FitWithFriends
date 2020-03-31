@@ -2,19 +2,17 @@ import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
+import StreamItem from '../components/StreamItem';
+
+const names = ['Extreme Core', 'Extreme Chest', 'Get Fit Quick', 'Sweat It Out'];
+
 export default function FriendStream(props) {
     return (
-        <ScrollView style={styles.workoutStream1} horizontal>
-          <View style={styles.workoutStreamItem}>
-            <Text>Extreme Core</Text>
-          </View>
-          <View style={styles.workoutStreamItem}>
-            <Text>Extreme Chest</Text>
-          </View>
-          <View style={styles.workoutStreamItem}>
-            <Text>Extreme Chest</Text>
-          </View>
-        </ScrollView>
+      <ScrollView style={styles.workoutStream1} horizontal>
+      {names.map((name, i)=>(
+        <StreamItem routineName={name} key={i}/>
+      ))}
+    </ScrollView>
         );
 }
 
