@@ -27,10 +27,10 @@ export default function HomeScreen() {
             style={styles.welcomeImage}
           />
         </View>
-        <Text>Suggested Routines</Text>
+        <Text style={styles.rowName}>Suggested Routines</Text>
         <SuggestedStream />
 
-        <Text>From Your Friends</Text>
+        <Text style={styles.rowName}>From Your Friends</Text>
         <FriendStream />
 
       </ScrollView>
@@ -52,11 +52,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   contentContainer: {
-    paddingTop: 30,
+    paddingTop: 5,
   },
   welcomeContainer: {
     alignItems: 'center',
-    marginTop: 10,
+    marginTop: 5,
     marginBottom: 20,
   },
   welcomeImage: {
@@ -103,5 +103,8 @@ const styles = StyleSheet.create({
     // This will be a horizontal stream, side scrolling eventually
     flexDirection: 'row',
 
-  }
+  },
+  rowName: {
+    marginLeft: 5,
+  },
 });
