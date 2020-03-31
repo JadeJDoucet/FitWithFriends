@@ -4,29 +4,14 @@ import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 
 import { MonoText } from '../components/StyledText';
-
+import FriendStream from '../components/FriendStream';
+import SuggestedStream from '../components/SuggestedStream';
 //md-calendar
 
 function getTodaysWorkout() {
   return "Full Body Workout" // Ability to click this text and choose from dropdown our workouts, or create one
 } 
 
-function getRecommendedWorkouts() {
-
-}
-
-function getFriendWorkouts() {
-  return (
-    <View style={styles.workoutStream1}>
-      <View style={styles.workoutStreamItem}>
-        <Text>Extreme Core</Text>
-      </View>
-      <View style={styles.workoutStreamItem}>
-        <Text>Extreme Chest</Text>
-      </View>
-    </View>
-    );
-}
 
 export default function HomeScreen() {
   return (
@@ -41,8 +26,13 @@ export default function HomeScreen() {
             }
             style={styles.welcomeImage}
           />
-          {getFriendWorkouts()}
         </View>
+        <Text>Suggested Routines</Text>
+        <SuggestedStream />
+
+        <Text>From Your Friends</Text>
+        <FriendStream />
+
       </ScrollView>
 
       <View style={styles.tabBarInfoContainer}>
