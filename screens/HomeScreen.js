@@ -32,6 +32,9 @@ export default function HomeScreen() {
 
         <Text style={styles.rowName}>From Your Friends</Text>
         <FriendStream />
+        
+        <Text style={styles.rowName}>From Your Friends</Text>
+        <FriendStream />
 
       </ScrollView>
 
