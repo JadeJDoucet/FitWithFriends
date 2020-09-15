@@ -19,7 +19,7 @@ export default function AddScreen() {
           <WeeklyCalendar />
       </View>
       <View>
-        <Text>This will be routine options</Text> 
+        <Text>Below will be lists of workouts added to day selected</Text> 
         <TouchableOpacity onPress={handlePreview()}>
           <Image
               source={require('../assets/images/robot-prod.png')}
