@@ -5,11 +5,12 @@ import * as WebBrowser from 'expo-web-browser';
 import { RectButton, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { getOrientationAsync } from 'expo/build/ScreenOrientation/ScreenOrientation';
 import WeeklyCalendar from '../components/WeeklyCalendar';
+import Colors from '../constants/Colors';
 
 export default function AddScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-      <View style={styles.thumbail}>
+      <View style={styles.preview}>
           <Text>Today's Workout:</Text>
           <Image
               source={require('../assets/images/robot-prod.png')}
@@ -19,7 +20,7 @@ export default function AddScreen() {
       </View>
       <View>
         <Text>This will be routine options</Text> 
-        <TouchableOpacity onPress={handleThumbnail()}>
+        <TouchableOpacity onPress={handlePreview()}>
           <Image
               source={require('../assets/images/robot-prod.png')}
               style={styles.welcomeImage}
@@ -30,7 +31,7 @@ export default function AddScreen() {
   );
 }
 
-function handleThumbnail() {
+function handlePreview() {
   // This will do something, pick a thumbnail or something
   
 }
@@ -51,10 +52,10 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
         borderRadius: 50,
       },
-      thumbail: {
-        backgroundColor: 'lightgrey',
+      preview: {
+        backgroundColor: Colors.secondary,
         flex: 1,
-        height: 150,
+        height: 162,
         width: 350,
         alignSelf: 'center',
         justifyContent: 'flex-start',

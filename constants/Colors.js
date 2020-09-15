@@ -12,5 +12,5 @@ export default {
   noticeBackground: tintColor,
   noticeText: '#fff',
   main: '#fff',
-  selected: 'lightgrey',
+  secondary: 'lightgrey',
 };
