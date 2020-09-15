@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   calendarWeek: {
     // This will be a horizontal stream, side scrolling eventually
     flexDirection: 'row',
-    paddingTop: 5,
+    paddingTop: 10,
   },
   selectedDay: {
     height: 50,
@@ -65,6 +65,6 @@ const styles = StyleSheet.create({
     padding: 5,
     margin: 1,
     alignItems: 'center',
-    backgroundColor: Colors.selected,
+    backgroundColor: Colors.secondary,
   }
 })
