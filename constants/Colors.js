@@ -11,6 +11,6 @@ export default {
   warningText: '#666804',
   noticeBackground: tintColor,
   noticeText: '#fff',
-  mainBackground: '#fff',
-  selectedColor: 'lightgrey',
+  main: '#fff',
+  selected: 'lightgrey',
 };
