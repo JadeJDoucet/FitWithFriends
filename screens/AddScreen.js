@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import { RectButton, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { getOrientationAsync } from 'expo/build/ScreenOrientation/ScreenOrientation';
+import WeeklyCalendar from '../components/WeeklyCalendar';
 
 export default function AddScreen() {
   return (
@@ -14,7 +15,7 @@ export default function AddScreen() {
               source={require('../assets/images/robot-prod.png')}
               style={styles.welcomeImage}
             />
-          
+          <WeeklyCalendar />
       </View>
       <View>
         <Text>This will be routine options</Text> 
