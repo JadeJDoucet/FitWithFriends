@@ -9,16 +9,21 @@ export default function AddScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
       <View style={styles.thumbail}>
-          <Text>Pick a thumbnail</Text>
+          <Text>Today's Workout:</Text>
+          <Image
+              source={require('../assets/images/robot-prod.png')}
+              style={styles.welcomeImage}
+            />
+          
+      </View>
+      <View>
+        <Text>This will be routine options</Text> 
         <TouchableOpacity onPress={handleThumbnail()}>
           <Image
               source={require('../assets/images/robot-prod.png')}
               style={styles.welcomeImage}
             />
         </TouchableOpacity>
-      </View>
-      <View>
-        <Text>This will be routine options</Text> 
       </View>
     </ScrollView>
   );
@@ -47,12 +52,11 @@ const styles = StyleSheet.create({
       },
       thumbail: {
         backgroundColor: 'lightgrey',
-        borderRadius: 50,
         flex: 1,
         height: 150,
-        width: 250,
+        width: 350,
         alignSelf: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
       }
 });
