@@ -16,7 +16,7 @@ function getTodaysWorkout() {
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+      <ScrollView style={styles.streamsContainer} contentContainerStyle={styles.contentContainer}>
         <View style={styles.welcomeContainer}>
           <Image
             source={
@@ -53,6 +53,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  streamsContainer: {
+    marginBottom: 70,
   },
   contentContainer: {
     paddingTop: 5,
