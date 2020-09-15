@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
+import Colors from '../constants/Colors';
+
 export default function WeeklyCalendar(props) {
     // This will use props to set the day clicked, but will use date function to set current day
     // Current day will have different color
@@ -35,7 +37,7 @@ export default function WeeklyCalendar(props) {
         <TouchableOpacity style={getDay('fri')} onPress={() => setCalDay('fri')}>
             <Text>Fri</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.calendarDay, getDay('sat')} onPress={() => setCalDay('sat')}>
+        <TouchableOpacity style={getDay('sat')} onPress={() => setCalDay('sat')}>
             <Text>Sat</Text>
         </TouchableOpacity>
     </ScrollView>
@@ -50,18 +52,19 @@ const styles = StyleSheet.create({
     padding: 5,
     margin: 1,
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: Colors.main,
   },
   calendarWeek: {
     // This will be a horizontal stream, side scrolling eventually
     flexDirection: 'row',
+    paddingTop: 5,
   },
   selectedDay: {
-    backgroundColor: 'lightgrey',
     height: 50,
     width: 70,
     padding: 5,
     margin: 1,
     alignItems: 'center',
+    backgroundColor: Colors.selected,
   }
 })
